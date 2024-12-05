@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="/styles/style_css.png" rel="stylesheet">
+   <link href="/styles/fonts_css.png" rel="stylesheet">
+   <link href="/styles/media_css.png" rel="stylesheet">
+    <title>Landing Page</title>
+</head>
+<body>
+    <header>
+        <div id="title">
+            <h1>Marketing</h1>
+            <h1>Criativo</h1>
+        </div>
+
+        <ul>
+            <a href="#"><li>Início</li></a>
+            <a href="#"><li>Serviços</li></a>
+            <a href="#"><li>Sobre</li></a>
+            <a href="#"><li>Contato</li></a>
+            <a href="#" id="inscreva-se-btn"><li>Já tem uma conta?</li></a>
+        </ul>
+    </header>
+
+    <main>
+        <aside>
+             <h2><span>Acesse Agora</span></h2>
+             <h2>Nossa Newslatter</h2>
+             <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                Inventore eligendi impedit quos ut, dolorum cum dicta, quod dignissimos dolore ipsa voluptatibus iure optio tempore, nisi quisquam repellat accusantium. 
+                Repellendus, quasi?
+             </p>
+             <form>
+                <input type="text" name="" placeholder="Login" autofocus="true"/>
+                <input type="password" name="" placeholder="Senha" id="senha">
+                <input type="submit" onclick="logar(); return false">
+             </form>
+
+             <script>
+                function logar(){ // função logar
+                //variáveis
+                var Login = document.getElementById('login').value //variavel login recebe o que for digitado no input login
+                var senha = document.getElementById('senha').value //variavel login recebe o que for digitado no input login
+                //validação do usuario e senha
+                if(login == "admin" && senha == "admin") {
+                    alert('login com sucesso'); //mostra mensagem
+                    location.href = "home.html"; //cha,a pagina home.html
+                }
+                else{
+                    alert('usuario ou senha incorretos!'); //mostra mensagem
+                    document.getElementById('login').value=''; // Limpa o campo
+                    document.getElementById('senha').value=''; // Limpa o campo
+                    document.getElementById('Login').value=''; // Posiciona o cursor no input login
+                }
+
+                }
+             </script>
+        
+</body>
+</html>
